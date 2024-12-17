@@ -1,3 +1,4 @@
 # For Python dependencies
 requests
+pycryptodome
 flask
