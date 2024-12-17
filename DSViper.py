@@ -60,7 +60,7 @@ def OURFIRSTMETHODXOR():
         f.write('AESCODE   RCDATA   "code.bin"\n'.encode('utf-8'))
         f.write('AESKEY    RCDATA   "key.bin"\n'.encode('utf-8'))
 
-    url = "https://raw.githubusercontent.com/dagowda/XOR_resource_defender_bypass_2025/refs/heads/main/XORbyp.cpp"
+    url = "https://raw.githubusercontent.com/dagowda/DSViper/refs/heads/main/code/XORbyp.cpp"
     try:
         res = requests.get(url)
         with open("XORbyp.cpp", "wb") as f:
@@ -110,7 +110,7 @@ def OURSECONDMETHODAES():
         f.write('AESCODE   RCDATA   "code.bin"\n'.encode('utf-8'))
         f.write('AESKEY    RCDATA   "key.bin"\n'.encode('utf-8'))
 
-    url = "https://raw.githubusercontent.com/dagowda/XOR_resource_defender_bypass_2025/refs/heads/main/AES/AESbypass.cpp"
+    url = "https://raw.githubusercontent.com/dagowda/DSViper/refs/heads/main/code/AESbyp.cpp"
     try:
         res = requests.get(url)
         with open("AESbyp.cpp", "wb") as f:
