@@ -8,15 +8,15 @@
 
 # Download
 
-+ git clone https://github.com/dagowda/DSViper.git
+>+ git clone https://github.com/dagowda/DSViper.git
 
-+ cd DSViper
+>+ cd DSViper
 
-+ pip install -r requirements.txt
+>+ pip install -r requirements.txt
 
 **OR**
 
-+ chmod +x install_dependencies.sh
+>+ chmod +x install_dependencies.sh
 
-+ ./install_dependencies.sh
+>+ ./install_dependencies.sh
 
