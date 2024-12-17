@@ -1,8 +1,12 @@
-# DS Viper
+# 🐍 **About DS Viper**
 
-+ DS Viper is a powerful tool designed to bypass Windows Defender's security mechanisms, enabling seamless execution of payloads on Windows systems without triggering security alerts. It uses a combination of advanced techniques to manipulate and disguise its payloads, providing attackers with a robust method for achieving undetected access.
+**DS Viper** is a powerful tool designed to **bypass Windows Defender's security mechanisms**, enabling seamless execution of payloads on Windows systems without triggering security alerts. It utilizes a combination of **advanced techniques** to manipulate and disguise payloads, providing cybersecurity professionals, red teamers, and penetration testers with a **robust solution** for achieving undetected access.
 
-+ Developed for penetration testers, red teamers, and cybersecurity professionals, DS Viper leverages sophisticated evasion methods to circumvent the most common Windows Defender defenses. Whether you're simulating a real-world attack or conducting a security audit, DS Viper serves as an essential tool for testing and improving system defenses.
+Whether you're simulating real-world attacks or conducting comprehensive security audits, **DS Viper** serves as an essential tool for testing and improving system defenses.
+
+> **We are constantly working on DS Viper** to enhance its capabilities, improve evasion techniques, and introduce customizable features such as the ability to add your own payloads or keywords.
+
+---
 
 <p align="center">
   <img src="https://github.com/dagowda/DSViper/blob/5fc9115972739444175e550bd4f0eced58fd5e72/img/screenshot1.jpg" alt="image_alt">
