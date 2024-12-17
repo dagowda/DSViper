@@ -20,3 +20,7 @@
 
 + ./install_dependencies.sh
 
+## USAGE
+
++ python3 DSViper.py
+  
