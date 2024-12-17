@@ -24,5 +24,5 @@
 
 + python3 DSViper.py
 
-+ ![image_alt](https://github.com/dagowda/DSViper/blob/c36bafa1b0efbc572f82ec084e3ce5034fd01fc8/img/screenshot2.png) 
+![image_alt](https://github.com/dagowda/DSViper/blob/c36bafa1b0efbc572f82ec084e3ce5034fd01fc8/img/screenshot2.png) 
   
