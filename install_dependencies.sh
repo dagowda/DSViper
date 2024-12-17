@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Python dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Install mingw-w64 for compiling C/C++ code on Windows
 sudo apt-get update
