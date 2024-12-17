@@ -6,26 +6,42 @@
 
 ![image_alt](https://github.com/dagowda/DSViper/blob/5fc9115972739444175e550bd4f0eced58fd5e72/img/screenshot1.jpg)
 
-# Download
+# 🚀 **Installation**
 
-+ git clone https://github.com/dagowda/DSViper.git
+Clone the repository and set up the environment.
 
-+ cd DSViper
+### **Option 1: Manual Installation**
+```bash
+git clone https://github.com/dagowda/DSViper.git
+cd DSViper
+pip install -r requirements.txt
+```
 
-+ pip install -r requirements.txt
+### **Option 2: Scripted Installation**
+If you prefer an automated setup, use the provided script:
 
-**OR**
+```bash
+chmod +x install_dependencies.sh
+./install_dependencies.sh
+```
 
+---
 
-+ chmod +x install_dependencies.sh
+# ⚙️ **Usage**
 
-+ ./install_dependencies.sh
+Make the `DSViper` executable and run it:
 
-## USAGE
+```bash
+chmod +x DSViper
+./DSViper
+```
 
-+ chmod +x DSViper
+---
 
-+ ./DSViper
+## 📄 **Notes**
+- Ensure you have **Python 3.8+** installed.
+- Run the commands in a terminal with the required permissions.
+
 
 ![image_alt](https://github.com/dagowda/DSViper/blob/c36bafa1b0efbc572f82ec084e3ce5034fd01fc8/img/screenshot2.png) 
   
