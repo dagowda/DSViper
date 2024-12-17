@@ -6,3 +6,17 @@
 
 ![image_alt](https://github.com/dagowda/DSViper/blob/b9024ad384bc648979ffd01f80c0f76851f6b279/screenshot.jpg)
 
+# Download
+
+git clone https://github.com/dagowda/DSViper.git
+
+cd DSViper
+
+pip install -r requirements.txt
+
+OR
+
+chmod +x install_dependencies.sh
+
+./install_dependencies.sh
+
