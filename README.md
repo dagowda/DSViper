@@ -14,7 +14,7 @@
 
 + pip install -r requirements.txt
 
-OR
+**OR**
 
 + chmod +x install_dependencies.sh
 
