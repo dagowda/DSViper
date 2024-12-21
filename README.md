@@ -12,7 +12,7 @@ Whether you're simulating real-world attacks or conducting comprehensive securit
   <img src="https://github.com/dagowda/DSViper/blob/5fc9115972739444175e550bd4f0eced58fd5e72/img/screenshot1.jpg" alt="image_alt">
 </p>
 
-# 🚀 **Installation**
+# ✔️ **Installation**
 
 Clone the repository and set up the environment.
 
