@@ -49,5 +49,5 @@ chmod +x DSViper
 - Run the commands in a terminal with the required permissions.
 
 
-![image_alt](https://github.com/dagowda/DSViper/blob/470132646c74ae4e094e58b1e30f1b4b23105a94/img/screenshot2.png) 
+![image_alt](https://github.com/dagowda/DSViper/blob/ab5b9dd9ea2c7173f9987a4e30a49c7fbe9c0080/img/screenshot2.png) 
   
