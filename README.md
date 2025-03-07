@@ -23,7 +23,7 @@ cd DSViper
 pip install -r requirements.txt
 ```
 
-### **Option 2: Scripted Installation(Recommended)**
+### **Option 2: Scripted Installation (Recommended)**
 If you prefer an automated setup, use the provided script:
 
 ```bash
