@@ -21,6 +21,8 @@ Clone the repository and set up the environment.
 git clone https://github.com/dagowda/DSViper.git
 cd DSViper
 pip install -r requirements.txt
+sudo apt-get install -y mingw-w64
+sudo apt install mono-complete
 ```
 
 ### **Option 2: Scripted Installation (Recommended)**
