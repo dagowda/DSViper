@@ -9,7 +9,7 @@ Whether you're simulating real-world attacks or conducting comprehensive securit
 ---
 
 <p align="center">
-  <img src="https://github.com/dagowda/DSViper/blob/5fc9115972739444175e550bd4f0eced58fd5e72/img/screenshot1.jpg" alt="image_alt">
+  <img src="https://github.com/dagowda/DSViper/blob/f5bb009d1e503e92e9eb74513c427c4d20a47fd0/img/screenshot2.png" alt="image_alt">
 </p>
 
 # ✔️ **Installation**
