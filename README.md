@@ -23,6 +23,8 @@ cd DSViper
 pip install -r requirements.txt
 sudo apt-get install -y mingw-w64
 sudo apt install mono-complete
+chmod +x MASM-compatible/uasm
+sudo cp MASM-compatible/uasm /usr/bin/uasm
 ```
 
 ### **Option 2: Scripted Installation (Recommended)**
