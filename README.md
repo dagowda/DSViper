@@ -48,7 +48,7 @@ Make the `DSViper` executable and run it:
 [-] No arch selected, selecting arch: x64 from the payload
 No encoder specified, outputting raw payload
 Payload size: 201798 bytes
-➜  DSViper git:(main) ✗ ./DSViper
+➜  DSViper git:(main) ✗ python3 DSViper.py
 
             
                                                                                                                                                                      
