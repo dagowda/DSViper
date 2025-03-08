@@ -66,7 +66,7 @@ Payload size: 201798 bytes
 ................................................                                                                                                                     
                       AntiVirus Bypass Tool (v.0.2.1)                                                                                                                
 ---------------------------------------------------------                                                                                                            
-Created by Dhanush Gowda(dagowda) and Sumanth Vanki                                                                                                                  
+Created by Dhanush Gowda(dagowda) and Sumanth Vankineni                                                                                                                  
 ---------------------------------------------------------                                                                                                            
 ................................................                                                                                                                     
                                                                                                                                                                      
