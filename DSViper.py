@@ -514,8 +514,8 @@ def applocker_installutil():
         print("make sure to run 'sudo apt install mono-complete' before using option 11")
 
     files = ["applocker.cs"]
-    #for file in files:
-        #os.remove(file)
+    for file in files:
+        os.remove(file)
         
 def applocker_installutil2():
     GREEN = "\033[92m"
