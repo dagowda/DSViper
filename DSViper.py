@@ -688,7 +688,7 @@ if __name__ == "__main__":
 {WHITE}{BOLD}................................................{RED}{BOLD} 
                       AntiVirus Bypass Tool (v.0.2.1)   
 ---------------------------------------------------------
-{MAGENTA}{BOLD}Created by Dhanush Gowda(dagowda) and Sumanth Vanki{RED}{BOLD}
+{MAGENTA}{BOLD}Created by Dhanush Gowda(dagowda) and Sumanth Vankineni{RED}{BOLD}
 ---------------------------------------------------------
 {WHITE}{BOLD}................................................{RED}{BOLD}
 
