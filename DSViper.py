@@ -768,8 +768,8 @@ def indirect2():
         print(f"Error: {e}")
 
     files = ["syscalls.asm","indirect.c","syscalls.h","syscalls.o", "dhanush.obj"]
-    #for file in files:
-        #os.remove(file) 
+    for file in files:
+        os.remove(file) 
 
 if __name__ == "__main__":
     WHITE = "\033[97m"
