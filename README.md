@@ -17,7 +17,7 @@ Whether you're simulating real-world attacks or conducting comprehensive securit
 Clone the repository and set up the environment.
 
 ### **Option 1: Manual Installation**
-```bash
+```console
 git clone https://github.com/dagowda/DSViper.git
 cd DSViper
 pip install -r requirements.txt
