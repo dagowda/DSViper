@@ -1,4 +1,4 @@
-
+//you would need key.bin and payload.bin and link it in a seperate file called resources.rc and then compile it.
 #include <windows.h>
 #include <stdio.h>
 #include <wincrypt.h>
