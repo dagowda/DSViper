@@ -99,7 +99,7 @@ Selected self-injection(AES)
 
 ![image_alt](https://github.com/dagowda/DSViper/blob/c9bc60a60bc73fb523a935b8d188fbec5b1521fa/img/screenshot2.png)
 
-## 💀 **References/Resources**
+## 💀 **References/Resource**
 -https://cloud.google.com/blog/topics/threat-intelligence/abusing-dll-misconfigurations
 
 -https://www.youtube.com/@gemini_security
