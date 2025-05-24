@@ -101,8 +101,12 @@ Selected self-injection(AES)
 
 ## 💀 **References/Resources**
 -https://cloud.google.com/blog/topics/threat-intelligence/abusing-dll-misconfigurations
+
 -https://www.youtube.com/@gemini_security
+
 -https://www.vulnlab.com/
+
 -https://github.com/SaadAhla/FilelessPELoader
+
 -https://www.ired.team/
   
